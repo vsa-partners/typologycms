@@ -1,0 +1,681 @@
+* HTML, 
+* HTML BODY{
+	height:100%;
+	overflow:hidden;
+	}
+* HTML #container {
+	overflow:auto;
+	height:99.9%;
+	}
+
+BODY {
+	color: #666;
+	font-family: "Lucida Grande", LucidaGrande, Lucida, Verdana, Arial, Sans-serif;
+	font-size: 10px;
+	background: #fbfbfb;
+	height: 100%;
+	}
+
+	BODY.popup {
+		/*padding-top: 5px;*/
+		background-color: #fff;
+		}
+
+	BODY.plain {
+		padding: 15px;
+		background-color: #fbfbfb;
+		}
+	BODY.error_page {
+		padding: 15px;
+		}
+
+A {
+	color: #666;
+	}
+	A:hover {
+		color: #222;
+		}
+H2 {
+	font-size: 16px;
+	font-weight: bold;
+	color: #3a3737;
+	}
+H2.heading {
+	padding-bottom: 10px;
+	margin-bottom: 15px;
+	border-bottom: 1px solid #3a3737;
+	}
+	
+.processing_icon {
+	height: 15px;
+	width: 15px;
+	background: transparent url('../img/processing.gif') no-repeat center 0;
+	}
+	
+	
+	
+	
+/* SITE ERRORS (Top level gobal error messages)
+ ---------------------------------------------------------------- */
+
+	.site_error	{
+		border: 1px solid #b52a2a;
+		background-color: #f44646;
+		color: #fff;
+		padding: 20px;
+		margin: 10px;
+		font-size: 13px;
+		line-height: 15px;
+		}
+		.site_error .site_error_inner {
+			}
+		
+		#site_error_ie6	{
+			display: none;
+			_display: block;
+			}
+			
+			
+			
+
+/* LAYOUT
+ ---------------------------------------------------------------- */
+
+	#container { /* Required to make IE6 scroll */
+		position:relative; 
+		}
+
+	#status_bar {
+		background: #666;
+		border-top: 2px solid #ddd;
+		height: 35px;
+		position:fixed;
+		_position:absolute; /* IE */
+		bottom:0;
+		left: 0;
+		width:100%;
+		z-index: 1000;
+		}
+
+		#status_bar .status_bar_button {
+			padding: 6px 8px;
+			border: 1px solid #aaa;
+			border: 1px solid #aaa;
+			-moz-border-radius: 3px;
+			-webkit-border-radius: 3px;
+			color: #aaa;
+			display: block;
+			margin-right: 8px;
+			margin-top: 6px;
+			text-decoration: none;
+			float: left;
+			}
+			#status_bar .status_bar_button.current,
+			#status_bar .status_bar_button:hover {
+				color: #fff;
+				border-color: #fff;
+				}
+
+		#status_bar .status_bar_menu {
+			margin-left: 10px;
+			}
+
+
+		#status_bar .publish_info {
+			float: left;
+			margin-top: 13px;
+			color: #aaa;
+			padding-left: 13px;
+			background: url('../img/statusbar_sprite.gif') no-repeat 0 0;
+			}
+
+		#status_bar .user_info {
+			float: right;
+			color: #aaa;
+			margin-right: 8px;
+			margin-top: 13px;
+			}
+	
+	#layout {
+		width: 1010px;
+		margin-left: 10px;
+		}
+
+		#layout #side_col {
+			width: 270px;
+			float: left;
+			}
+
+		#layout #main_col {
+			width: 720px;
+			float: right;
+			padding-top: 30px;
+			padding-bottom: 20px;
+			}
+
+			#layout #main_col .message {
+				margin-bottom: 15px;
+				padding: 8px;
+				border: 1px solid #ccc;
+				font-weight: bold;
+				}
+				#layout #main_col .page_message {
+					background-color: #efefef;
+					border-color: #989898;
+					color: #989898;
+					}
+				#layout #main_col .page_error {
+					background-color: #fddada;
+					border-color: #ff6161;
+					color: #e04034;				
+					}
+
+	#page_footer {
+		clear: both;
+		padding-bottom: 70px;
+		margin: 0 30px;
+		}	
+		#page_footer .tndr {
+			float: right;
+			height: 35px;
+			width: 200px;
+			text-align: right;
+			}
+
+
+
+
+/* CONTENT STUFF
+ ---------------------------------------------------------------- */
+
+	#layout #main_col .content_header {
+		padding-bottom: 6px;
+		margin-bottom: 15px;	
+		border-bottom: 2px solid #ededed;
+		height: 26px;
+		}
+		#layout #main_col .content_header H2 {
+			text-transform: uppercase;
+			font-weight: 300;			
+			padding-top: 5px;
+			color: #444;
+			float: left;
+			}
+		#layout #main_col .content_header BUTTON {
+			float: right;
+			}
+	
+
+	#layout #main_col .content_footer {
+		margin-top: 15px;
+		overflow: hidden;
+		padding: 8px;
+		border-top: 1px solid #ddd;
+		}
+		#layout #main_col .content_footer DL {
+			float: left;
+			}
+			#layout #main_col .content_footer DL DT {
+				font-weight: bold;
+				float: left;
+				width: 100px;
+				}
+				#layout #main_col .content_footer DL DT.small {
+					width: 50px;
+					}
+			#layout #main_col .content_footer DL DD {
+				float: left;
+				width: 190px;
+				}
+				#layout #main_col .content_footer DL DD.small {
+					width: 100px;
+					}
+
+/* SIDEBAR STUFF
+ ---------------------------------------------------------------- */
+
+
+	#side_col {
+		background: url('../img/sidebar_middle.gif') repeat-y top right;
+		}
+
+		#side_col #side_col_top {
+			background: transparent url('../img/sidebar_top.gif') no-repeat top right;
+			padding-top: 20px;
+			}
+		#side_col #side_col_bottom {
+			background: transparent url('../img/sidebar_bottom.gif') no-repeat bottom right;
+			padding-bottom: 70px;
+			padding-right: 15px;
+			min-height: 200px;
+			}
+
+			#side_col #side_col_bottom #logo {
+				margin-bottom: 15px;
+				}
+
+
+/* POPUP 
+ ---------------------------------------------------------------- */
+					
+	#popup_header {
+		padding-top: 5px;
+		padding-bottom: 8px;
+		padding-left: 7px;
+		font-weight: bold;
+		text-transform: uppercase;
+		background: url('../img/modal_strip_bg_top.jpg') no-repeat bottom left;
+		width: 100%;
+		}
+	
+	#popup_content {
+		padding: 3px 3px 0 3px;
+		}
+		
+		#popup_content #inner_scroll {
+			padding: 0 0 2px 0;
+			height: 567px;
+			overflow: auto;
+			}
+		#popup_content #inner_fixed {
+			padding: 0 0 2px 0;
+			height: 540px;
+			}
+
+
+/* ON PAGE ERRORS / MESSAGES
+ ---------------------------------------------------------------- */
+					
+	.page_messages {
+		margin: 5px 0;	
+		}
+		.page_messages .message {
+			padding: 5px 0;
+			font-weight: bold;
+			border-top: 1px solid #ccc;
+			border-bottom: 1px solid #ccc;
+			line-height: 13px;
+			}
+		.page_messages .error {
+			color: red;
+			border-color: red;
+			}
+
+
+
+/* ERROR PAGE
+ ---------------------------------------------------------------- */
+					
+	.error_message {
+		padding: 10px;
+		border: 1px solid red;
+		background-color: #fff;
+		}
+						
+		.error_message H1 {
+			color: red;
+			font-size: 18px;
+			font-weight: bold;
+			text-transform: uppercase;
+			}
+		.error_message P {
+			padding-top: 5px;
+			color: red;
+			}
+	
+		.error_message .button {
+			margin-top: 10px;
+			}
+			.error_message .button A {
+				text-decoration: none;
+				text-transform: uppercase;
+				font-weight: bold;
+				}
+			.error_message .button A:hover {
+				color: #222;
+				}
+
+
+
+/* DATA TABLE
+ ---------------------------------------------------------------- */
+
+	.data_table {
+		border: 1px solid #ccc;
+		padding: 4px;
+		}
+		.data_table TH {
+			background-color: #f4f4f4;
+			padding: 4px 4px 6px 4px;
+			font-weight: bold;
+			text-transform: uppercase;
+			color: #333;
+			border-bottom: 1px solid #ebebeb;
+			}
+			.data_table TR:last-of-type TH {
+	
+				border: 0;
+				}
+		.data_table TD {
+			padding: 4px;
+			border-bottom: 1px solid #ddd;
+			line-height: 10px;
+			}
+			.data_table TR.noborder TD,
+			.data_table TR:last-of-type TD {
+				border: 0;
+				}
+	
+		.data_table TD.light {
+			color: #bcbcbc;
+			}
+	
+	
+		.data_table THEAD TD {
+			background-color: #f6f6f6;
+			padding: 4px 4px 6px 4px;
+			border: 0;
+			}
+	
+		.data_table TABLE {
+			padding: 0;
+			border: 0;
+			}
+			.data_table TABLE.show_border {
+				border: 1px solid #ccc;
+				}
+	
+		.data_table.small * {
+			font-size: 9px;
+			}
+
+
+/* TABS
+ ---------------------------------------------------------------- */
+			
+	.tab_set .tab_nav {
+		list-style:none;
+		padding:0;
+		clear:both;
+		height:28px;
+		clear:both;
+		background: transparent url('../img/content_tab_bg.gif') repeat-x 0 0;
+		}
+	
+		.tab_set .tab_nav LI {
+			float: left;
+			}
+	
+			.tab_set .tab_nav LI A {
+				background: transparent url('../img/content_tab_l.gif') no-repeat 0 0;
+				padding-left: 2px;
+				float: left;
+				margin-right: 4px;
+				font-size: 12px;
+				letter-spacing: 0.5px;
+				font-weight: bold;
+				text-transform: uppercase;
+				display: block;
+				text-decoration: none;
+				}
+				
+				.tab_set .tab_nav LI A SPAN {
+					display: block;
+					background: transparent url('../img/content_tab_r.gif') no-repeat top right;
+					padding: 8px 14px 8px 12px;
+					*padding-bottom: 8px;
+					text-decoration: none;
+					display: block;
+					text-decoration: none;
+					}
+					.tab_set .tab_nav LI A:hover {
+						color: #222;
+						}
+		
+				.tab_set .tab_nav LI A.active {
+					background-position: 0 -37px;
+					background-color: #fbfbfb;
+					}
+					.tab_set .tab_nav LI A.active SPAN {
+						background-position: 100% -37px;
+						}
+	
+	
+	.tab_set .tab_content {
+		clear: both;
+		padding: 12px 7px 7px 7px;
+		border: 1px solid #999;
+		margin-bottom: 15px;
+		-moz-border-radius-bottomright: 4px;
+		-moz-border-radius-bottomleft: 4px;
+		-webkit-border-bottom-right-radius: 4px;
+		-webkit-border-bottom-left-radius: 4px;
+		border-top: 0;
+		}	
+	
+		/* Nested Tabs */
+		.tab_set .tab_content .tab_set {
+			margin-top: 10px;
+			}
+
+
+/* PAGE MODULE
+ ---------------------------------------------------------------- */
+ 
+	.publish_conrols {
+		margin-bottom: 20px;
+		border: 1px solid #ddd;
+		-moz-border-radius: 4px;
+		-webkit-border-radius: 4px;
+		padding: 10px;
+		display: block;
+		*display: inline-block; /* IE */
+		}
+		.publish_conrols:after {content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;}
+		
+		.publish_conrols .publish_column {
+			float: left;
+			margin-right: 10px;
+			}	
+			.publish_conrols .publish_column .title {
+				padding-bottom: 6px;
+				font-weight: bold;
+				}
+				
+		.publish_date_column {
+			margin-left: 10px;
+			padding-left: 45px;
+			background: url('../img/publish_control_icon_arrow.gif') no-repeat 0 20px;
+			}
+
+	#page_edit_buttons {
+		clear: both;
+		margin-top: 30px;
+		margin-bottom: 30px;
+		}
+
+
+/* PAGE MODULE - STATUS BAR
+ ---------------------------------------------------------------- */
+
+	.statusbar {
+		margin-bottom: 20px;
+		border: 1px solid #666;
+		padding: 10px;
+		-moz-border-radius: 4px;
+		-webkit-border-radius: 4px;
+		display: block;
+		*display: inline-block; /* IE */
+		}
+		.statusbar:after {content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;}
+		
+		.statusbar .statusbar_icon {
+			width: 16px;
+			height: 22px;
+			float: left;
+			background: url('../img/statusbar_icons.png') no-repeat bottom left;
+			margin-left: 5px;
+			}
+
+		.statusbar .statusbar_text {
+			float: left;
+			width: 450px;
+			font-size: 11px;
+			line-height: 14px;			
+			margin-left: 15px;
+			}
+
+		.statusbar .statusbar_button {
+			width: 180px;
+			float: right;
+			padding-top: 5px;
+			}
+			.statusbar .statusbar_button BUTTON {
+				float: right;
+				}
+				.statusbar .statusbar_button BUTTON:first-of-type {
+					margin-right: 0;
+					}
+		
+		
+		
+
+		/* Draft */
+		.statusbar_1 {
+			background-color: #f8f8f8;
+			border-color: #e6e6e6;
+			color: #7b7b7b;
+			}
+		/* Declined */
+		.statusbar_5 {
+			background-color: #f8f8f8;
+			border-color: #e6e6e6;
+			color: #7b7b7b;
+			}
+			.statusbar_5 .statusbar_text {	
+				padding-top: 1px;
+				}
+			.statusbar_5 .statusbar_icon {	
+				background-position: -40px bottom;
+				height: 16px;
+				}
+		/* Pending Approval */
+		.statusbar_10 {
+			background-color: #fff6ac;
+			border-color: #eed92f;
+			color: #c0c451;
+			}
+			.statusbar_10 .statusbar_icon {	
+				background-position: -20px bottom;
+				}
+		/* Published */
+		.statusbar_20 {
+			background-color: #e7fccd;
+			border-color: #a8e483;
+			color: #82cb56;
+			}
+			.statusbar_20 .statusbar_icon {	
+				background-position: -60px bottom;
+				}
+
+		/* Deleted */
+		.statusbar_90 {
+			background-color: #fddada;
+			border-color: #ff6161;
+			color: #e04034;
+			}
+			.statusbar_90 .statusbar_icon {	
+				background-position: -20px bottom;
+				}
+
+
+		.data_table.color_pending {
+			border-color: #eed92f;
+			}
+
+
+/* STATUS ICONS
+ ---------------------------------------------------------------- */
+
+	.status {
+		height: 0;
+		padding-top: 9px;
+		width: 9px;
+		overflow: hidden;
+		display: block;
+		display: inline-block;
+		background: transparent url('../img/status_icons_small.gif') no-repeat 0 0;
+		}
+		.status_10 {
+			background-position: -9px 0;
+			}	
+		.status_20 {
+			background-position: -19px 0;
+			}
+		.status_80 {
+			background-position: 0 -29px;
+			}	
+
+/* LOGIN PAGE
+ ---------------------------------------------------------------- */
+
+	#login {
+		width: 400px;
+		}
+	
+		#login #logo {
+			padding-left: 5px;
+			margin-bottom: 30px;
+			}
+		#login #msg {
+			background-color: #ccc;
+			margin-bottom: 3px;
+			font-weight: bold;
+			padding: 7px 5px;
+			}
+		#login H2 {
+			margin: 10px 0 3px 0;
+			text-transform: uppercase;
+			font-weight: 300;			
+			padding-top: 5px;
+			color: #444;
+			padding-bottom: 6px;
+			padding-left: 5px;
+			border-bottom: 2px solid #ccc;
+			}
+
+		#login FORM {
+			padding-top: 2px;
+			}			
+
+		#login #main_col .form_node LABEL {
+			width: 100px;
+			}
+		#login #main_col .form_node .field {
+			width: 280px;
+			}
+
+		#login .instructions {
+			color: #9a9a9a;
+			margin-top: 40px;
+			padding-left: 5px;
+			}
+		
+
+/* DASHBOARD
+ ---------------------------------------------------------------- */
+
+	.dashboard {
+		}
+		.dashboard .column {
+			width: 330px;
+			}
+
+
+
+/* WYSIWYG EDITOR
+ ---------------------------------------------------------------- */
+
+.cleditorList h1 { font-size: 20px; font-weight: bold; color: #666;}
+.cleditorList h2 { font-size: 17px; font-weight: bold; color: #666; }
+.cleditorList h3 { font-size: 14px; font-weight: bold; color: #666; }

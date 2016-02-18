@@ -1,0 +1,66 @@
+# --------------------------------------------------------------------------------
+#
+# CMS HTTP Configuration File
+# Author: VSAPartners
+#
+# --------------------------------------------------------------------------------
+
+AddType font/opentype .woff 
+
+Options -Indexes
+AddDefaultCharset utf-8 
+RewriteEngine on
+#RewriteBase /
+
+
+# --------------------------------------------------------------------------------
+# COMPRESS (GZIP) FILES
+
+AddOutputFilterByType DEFLATE text/html text/plain text/css text/xml application/x-javascript 
+# MAKE SURE WE ARE NOT GZIPING FLV FILES, WON'T BUFFER CORRECTLY
+SetEnvIfNoCase Request_URI \.flv$ no-gzip dont-vary
+SetEnvIfNoCase Request_URI \.mp4$ no-gzip dont-vary
+
+
+# --------------------------------------------------------------------------------
+# PHP SETTINGS
+
+php_value upload_max_filesize 400M
+php_value post_max_size 400M
+php_value max_input_time 9000
+php_value max_execution_time 9000
+php_value memory_limit 500M
+
+
+# --------------------------------------------------------------------------------
+# NON CMS REDIRECTIONS
+
+
+#RewriteCond %{HTTP_HOST} ^some-old-domain.com$ [NC]
+#RewriteRule ^(.*)$ http://www.domain.com [R=301,L]
+
+#RewriteCond %{HTTP_HOST} ^domain.com$ [NC]
+#RewriteRule ^(.*)$ http://www.domain.com/$1 [R=301,L]
+
+#RewriteRule ^old_page/$ /new_page/ [R=301,NC,L]
+
+
+# --------------------------------------------------------------------------------
+# CMS MOD REWRITE
+
+# Local development, load all cms files from staging site
+#RewriteCond %{HTTP_HOST} ^somewebsite.local$ [NC]
+#RewriteRule ^FILE/(.*)$  http://staging.somewebsite.com/FILE/$1  [L,P]
+
+# Remove access to restricted folders
+RewriteRule ^cms/system(.*)$ / [NC,R,L]
+
+# When both CMS modules are on same box send manage requests to correct location 
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond $1	!^(server-status|robots.txt|assets) [NC]
+RewriteRule ^manage(.*)$ "manage.php/$1" [L]
+
+# Send all requests through CMS
+RewriteCond %{REQUEST_FILENAME} !-f 
+RewriteCond $1	!^(server-status|robots.txt|assets) [NC]
+RewriteRule ^(.*)$ "index.php/$1" [L]

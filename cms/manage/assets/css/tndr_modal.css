@@ -1,0 +1,212 @@
+/* ALERT BOX / OVERLAY
+ ---------------------------------------------------------------- */
+	
+	#tndr_overlay {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index:5000;
+		background-image: url('../img/modal_overlay_bg.png');
+		/* Can't use css transparency, messes up the buttons for some reason */
+		}
+		#tndr_overlay[id]{
+			position:fixed;
+			}
+		* HTML #tndr_overlay {
+			background-image: none;
+			}
+		.popup #tndr_overlay { background-image: url('../img/modal_overlay_white_bg.png'); }
+			
+	#tndr_modal {
+		position: absolute;
+		z-index:6000;
+		top: 0;
+		left: 0;
+		text-align: center;
+		width: 100%;
+		padding-top: 10px;
+		}
+		#tndr_modal[id]{
+			position:fixed;
+			}
+
+		#tndr_modal TABLE {
+			margin: 0 auto;
+			min-width: 250px;
+			width: auto !important;
+			width: 250px;
+			cursor: pointer;
+			}
+
+		#tndr_modal .dialog_border {
+			background: url('../img/modal_border.png') no-repeat 0 0;
+			}
+
+			/* Facebook table style dialog borders */
+			#tndr_modal .dialog_border.border_tl {
+				height: 12px;			
+				width: 12px;
+				}
+			#tndr_modal .dialog_border.border_t {
+				height: 12px;			
+				background: url('../img/modal_border_horiz.png') repeat-x 0 0;
+				}
+			#tndr_modal .dialog_border.border_tr {
+				height: 12px;			
+				width: 12px;
+				background-position: 0 -12px;
+				}
+
+			#tndr_modal .dialog_border.border_l {
+				width: 12px;
+				background-position: -12px 0;
+				background-repeat: repeat-y;
+				}
+			#tndr_modal .dialog_border.border_r {
+				width: 12px;
+				background-position: -24px 0;
+				background-repeat: repeat-y;
+				}
+
+			#tndr_modal .dialog_border.border_bl {
+				height: 12px;
+				width: 12px;
+				background-position: 0 -24px;				
+				}
+			#tndr_modal .dialog_border.border_b {
+				height: 12px;			
+				background: url('../img/modal_border_horiz.png') repeat-x 0 0;
+				background-position: 0 -12px;
+				}
+			#tndr_modal .dialog_border.border_br {
+				height: 12px;			
+				width: 12px;
+				background-position: 0 -36px;
+				}
+
+		#tndr_modal .dialog_content {
+			background-color: #fff;
+			position: relative;
+			}
+
+			/* Inforce min-width */
+			#tndr_modal .inner {
+				min-width: 250px;
+				width: auto !important;
+				width: 250px;
+				}
+
+			/* Text only modals - Inforce max-width */
+			#tndr_modal .content {
+				max-width: 400px;
+				width: auto !important;
+				width: 400px;
+				}
+
+			#tndr_modal .dialog_content .button_row {
+				margin: 15px 5px 5px 5px;
+				}
+
+			#tndr_modal .dialog_content .alert_message {
+				color: #70df39;
+				font-weight: bold;
+				margin: 10px 5px 13px 5px;
+				}
+	
+			#tndr_modal .dialog_content .alert_error {
+				color: #fe5f5f;
+				font-weight: bold;
+				margin: 5px 5px 10px 5px;
+				line-height: 14px;
+				}
+
+			#tndr_modal .dialog_content P {
+				margin-bottom: 4px;
+				}
+
+				#tndr_modal .dialog_content UL {
+					list-style: disc inside;
+					}
+					#tndr_modal .dialog_content UL LI {
+						padding: 2px 0 2px 10px;
+						}
+
+		#tndr_modal .dialog_close {
+			text-align: right;
+			height: 19px;
+			padding-right: 6px;
+			}
+			#tndr_modal .dialog_close A {
+				background: transparent url('../img/modal_btn_close.png') no-repeat 0 0;
+				display: block;
+				padding-top: 16px;
+				height: 0;
+				width: 50px;
+				overflow: hidden;
+				float: right;
+				}
+				#tndr_modal .dialog_close A:hover {
+					background-position: 0 -21px;
+					}
+
+
+/* MULTIPLUE FILE UPLOAD
+ ---------------------------------------------------------------- */
+
+	.dialog_upload {
+		width: 320px;
+		}
+
+	.dialog_upload .button_row {
+		height: 25px;
+		overflow: hidden;
+		}
+	.dialog_upload .dialog_upload_processing {
+		height: 25px;
+		background: url('../img/processing.gif') no-repeat 50% 50%;
+		}
+
+		#divStatus {
+			padding: 6px 0;
+			}
+		
+		#fsUploadProgress {
+			max-height: 460px;
+			overflow: auto;
+			}
+			#fsUploadProgress .legend {
+				padding-top: 4px;
+				display: block;
+				font-weight: bold;
+				padding-bottom: 8px;
+			    border-bottom: 1px solid #DDDDDD;
+			    margin-bottom: 8px;
+			    }
+
+			#fsUploadProgress .error {
+				color: red;
+				}
+
+			#fsUploadProgress .progressContainer {
+				padding-bottom: 8px;
+			    border-bottom: 1px solid #DDDDDD;
+			    margin-bottom: 8px;
+			    }
+				#fsUploadProgress .progressContainer .progressName {
+					padding-bottom: 2px;
+					}
+				#fsUploadProgress .progressContainer .progressBarComplete {
+					display: none;
+					}							
+				#fsUploadProgress .progressContainer .progressBarInProgress {
+					margin-top: 6px;
+					height: 4px;
+					background-color: #ccc;
+					width: 0;
+					}
+				#fsUploadProgress .progressContainer .progressBarComplete {
+					display: none;
+					}							
+			

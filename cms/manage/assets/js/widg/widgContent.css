@@ -1,0 +1,17 @@
+/* HTML TAGS */
+
+BODY {
+	font-family: "Lucida Grande", LucidaGrande, Lucida, Verdana, Arial, Sans-serif;
+	font-size: 11px;
+	color: #333;
+	background-color: #FFFFFF;
+	line-height: 15px;
+	}
+
+A {
+	color: #111;
+	}
+
+STRONG {
+	color: #111;
+	}

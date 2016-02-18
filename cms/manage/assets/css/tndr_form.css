@@ -1,0 +1,1025 @@
+
+/* FORM LAYOUT
+ ---------------------------------------------------------------- */
+.tndr_form {
+	font-family: "Lucida Grande", LucidaGrande, Lucida, Verdana, Arial, Sans-serif;
+	font-size: 10px;
+	}
+
+	.tndr_form INPUT,
+	.tndr_form TEXTAREA,
+	.tndr_form .display_field {
+		font-family: "Lucida Grande", LucidaGrande, Lucida, Verdana, Arial, Sans-serif;
+		font-size: 10px;
+		color: #444 !important;
+		font-weight: bold;
+		letter-spacing: 0.2px;
+		}
+
+	.tndr_form .form_row {
+		border-top: 1px solid #ddd;
+		padding-top: 6px;
+		margin-bottom: 6px;
+		display: block;
+		*display: inline-block; /* IE */
+		}
+		.tndr_form .form_row:after {content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;}
+
+	.tndr_form .form_row:first-child,
+	.tndr_form .form_row.no_border,
+	.tndr_form .form_row.first { 
+		border: 0;
+		padding-top: 0;
+		}
+
+	.tndr_form .form_row.text { 
+		line-height: 13px;
+		}
+
+	.tndr_form .form_row LABEL {
+		font-weight: bold;
+		width: 118px;
+		float: left;
+		padding-top: 4px;
+		padding-left: 2px; /* If problems arrise, remove this */
+		color: #333;
+		}
+		.tndr_form .form_row LABEL .sublabel {
+			float: right;
+			font-weight: normal;
+			color: #979797;			
+			}
+
+	.form_row .note {	
+		padding: 6px 0 2px 0;
+		clear: both;
+		padding-left: 135px;
+		font-style: oblique; 
+		}
+	.form_row .map {	
+	    height: 400px;
+		margin: 6px 0 2px 0;
+		clear: both;
+		}
+		
+
+	/* --- ROW : FIELD --- */
+
+	.tndr_form .form_row .field {
+		display: block;
+		padding-left: 13px;
+		*display: inline-block; /* IE */
+		width: 400px;
+		float: left;
+		}
+		.tndr_form .form_row .field:after {content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;}
+
+
+	/* --- ROW : ERROR --- */
+
+		.tndr_form .form_row .has_error {
+			background: url('../img/form_error_icon.gif') no-repeat 0 0 !important;
+			}
+
+		.tndr_form .form_row .field .error {
+			clear: both;
+			}
+			.tndr_form .form_row .field .error P {
+				color: #de3939;
+				padding-top: 6px;
+				}
+
+
+	/* --- ROW : COLUMNS --- */
+
+	.tndr_form .lang_cols {
+		width: 512px !important;
+		padding-left: 0 !important;
+		}
+
+	.tndr_form .lang_cols .lang_col {
+		position: relative;
+		padding-left: 7px;
+		float: left;
+		}
+		.tndr_form .lang_cols .lang_col .lang_title {
+			background-color: #D9D9D9;
+			color: #444444;
+			font-size: 8px;
+			font-weight: bold;
+			left: 12px;
+			padding: 4px 2px 3px;
+			position: absolute;
+			top: 4px;
+			}
+		.tndr_form .lang_cols .lang_col .form_input_text INPUT {
+			width: 220px !important;
+			margin-left: 20px;
+			}
+		.tndr_form .lang_cols .lang_col .form_textarea .textarea_btm .textarea_btm_right TEXTAREA {
+			width: 220px !important;
+			margin-left: 20px;
+			}
+			
+		.tndr_form .lang_cols .lang_col .cleditorMain {
+			width: 244px !important;
+			}
+		.tndr_form .lang_cols .lang_col .cleditorToolbar {
+			padding-left: 20px;
+			}
+
+	/* --- ROW : BUTTONS --- */
+
+	.tndr_form .form_row .field .field_buttons {
+		float: right;
+		}
+    	.tndr_form .form_row .field .field_buttons A {
+    	    margin-left: 4px;
+    	    }
+
+	.tndr_form .form_row .row_buttons {
+		float: right;
+		margin-top: 2px;
+		}
+
+
+		.tndr_form .form_row .row_buttons .button_bar {
+			height: 10px;
+			background-color: #b8b8b8;
+			padding: 0 6px 0 6px;
+			border: 1px solid white;
+			overflow: hidden;
+			-webkit-border-radius: 4px;
+			border-radius: 4px;
+			}
+
+			.tndr_form .form_row .row_buttons .button_bar .buttons_inner .button_add, 
+			.tndr_form .form_row .row_buttons .button_bar .buttons_inner .button_remove, 
+			.tndr_form .form_row .row_buttons .button_bar .buttons_inner .button_sort {
+				display: block;
+				height: 0;
+				width: 8px;
+				padding-top: 10px;
+				background: url('../img/form_section_icons.gif') no-repeat 0 0;
+				float: left;
+				overflow: hidden;
+				}
+				.tndr_form .form_row .row_buttons .button_bar .buttons_inner .button_add {
+					background-position: -3px 0;
+					}
+					.tndr_form .form_row .row_buttons .button_bar .buttons_inner .button_add:hover {
+						background-position: -3px 11px;
+						}
+				.tndr_form .form_row .row_buttons .button_bar .buttons_inner .button_remove {
+					background-position: -11px -0;
+					}
+					.tndr_form .form_row .row_buttons .button_bar .buttons_inner .button_remove:hover {
+						background-position: -11px -11px;
+						}
+				.tndr_form .form_row .row_buttons .button_bar .buttons_inner .button_sort {
+					background-position: -19px -0;
+					}
+					.tndr_form .form_row .row_buttons .button_bar .buttons_inner .button_sort:hover {
+						background-position: -19px -11px;
+						}
+
+
+
+	/* --- ROW : FIELD TEXT --- */
+
+		.tndr_form .form_row .field_text {
+			padding: 4px 0 5px 138px;
+			}
+			.tndr_form .form_row .field .field_text {
+				padding: 4px 0 5px 0;
+				}
+			.tndr_form .form_row .field .sub_row .field_text {
+			    padding-top: 0;
+			    }
+
+			.tndr_form .form_row .field_text IMG {
+				vertical-align: baseline;
+				}
+
+	/* --- CHECKBOX ROW --- */
+
+	.tndr_form .field .checkbox_cell {
+		float: left;
+		margin-right: 12px;
+		}
+		.tndr_form .field .checkbox_cell LABEL {
+			float: left;
+			padding-left: 2px;
+			width: auto !important;
+			font-weight: normal !important;
+			color: #666666;
+			}
+		.tndr_form .field .checkbox_cell .box {
+			float: left;
+			}
+
+	/* --- CHECKBOX ROW --- */
+
+	.tndr_form .field .checkbox_row {
+		font-size: 10px;
+		padding-top: 2px;
+		padding-bottom: 4px;
+		border-top: 1px solid #ddd;
+		display: block;
+		*display: inline-block; /* IE */		
+		
+		}
+		.tndr_form .field .checkbox_row:after {content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;}
+
+		.tndr_form .field .checkbox_row:first-child {
+			border-top: none;
+			padding-top: 0;
+			}
+
+		.tndr_form .field .checkbox_row .checkbox_row_data {
+			float: left;
+			width: 200px;
+			padding-left: 10px;
+			}
+		.tndr_form .field .checkbox_row .form_input_radio {
+			float: left;
+			}
+		.tndr_form .field .checkbox_row LABEL {
+			padding: 2px 0 0 0;
+			clear: both;
+			}
+		.tndr_form .field .checkbox_row P {
+			padding: 2px 0 0 0;
+			clear: both;
+			}
+
+
+
+
+
+
+/* SUB ROW
+ ---------------------------------------------------------------- */
+
+	.tndr_form .sub_row { 
+		display: block;
+		*display: inline-block; /* IE */	
+		clear: both;
+		padding-top: 5px;
+		}
+		.tndr_form .sub_row:after {content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;}
+
+		.tndr_form .sub_row LABEL { 
+			width: 120px;
+			font-weight: normal;
+			float: left;
+			padding-bottom: 5px;
+			padding-top: 3px;
+			}
+		.tndr_form .sub_row .sub_field { 
+			width: 185px;
+			float: left;
+			padding-left: 13px;
+			}
+
+		.tndr_form .sub_row .sub_row .form_select { 
+		    width: 150px !important;
+		    }
+				
+
+/* SECTION
+ ---------------------------------------------------------------- */
+
+	.tndr_form .form_section {
+		border: 1px solid #ddd;
+		-moz-border-radius: 3px;
+		-webkit-border-radius: 3px;
+		margin-bottom: 8px;
+		margin-top: 15px;
+		position: relative;
+		*display: inline-block; /* IE */
+		}
+		.tndr_form .form_section:after {content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;}
+
+		.tndr_form .form_section_borderless {
+			margin: 0;
+			border: 0;
+			padding: 0;
+			}
+
+				
+		.tndr_form .form_section .form_section_header {
+			background-color: #ddd;
+			-moz-border-radius: 3px 3px 0 0;
+			-webkit-border-radius: 3px 3px 0 0;
+			font-weight: bold;
+			padding: 7px 9px;	
+			position: relative;
+			top: -2px;
+			margin-bottom: 6px;
+			color: #333;
+			}
+
+		.tndr_form .form_section .section_content {	
+			padding: 3px 8px 0;
+			}
+
+			.popup .tndr_form .form_section .form_section_header {
+				background-color: #fff;
+				}
+				.popup .tndr_form .form_section .form_section_header A {
+					text-decoration: none;
+					}
+
+		.tndr_form .form_section .form_section_buttons {
+			position: absolute;
+			top: 5px;
+			right: 8px;
+			height: 10px;
+			background-color: #b8b8b8;
+			padding: 0 6px 0 6px;
+			border: 1px solid white;
+			overflow: hidden;
+			-webkit-border-radius: 4px;
+			border-radius: 4px;
+			}
+			.tndr_form .form_section .form_section_buttons .buttons_inner { 
+				}
+
+			.tndr_form .form_section .form_section_buttons .buttons_inner .button_add, 
+			.tndr_form .form_section .form_section_buttons .buttons_inner .button_remove, 
+			.tndr_form .form_section .form_section_buttons .buttons_inner .button_sort {
+				display: block;
+				height: 0;
+				width: 8px;
+				padding-top: 11px;
+				background: url('../img/form_section_icons.gif') no-repeat 0 0;
+				float: left;
+				overflow: hidden;
+				}
+				.tndr_form .form_section .form_section_buttons .buttons_inner .button_add {
+					background-position: -3px 0;
+					}
+					.tndr_form .form_section .form_section_buttons .buttons_inner .button_add:hover {
+						background-position: -3px -11px ;
+						}
+				.tndr_form .form_section .form_section_buttons .buttons_inner .button_remove {
+					background-position: -11px 0;
+					}
+					.tndr_form .form_section .form_section_buttons .buttons_inner .button_remove:hover {
+						background-position: -11px -11px;
+						}
+				.tndr_form .form_section .form_section_buttons .buttons_inner .button_sort {
+					background-position: -19px 0;
+					}
+					.tndr_form .form_section .form_section_buttons .buttons_inner .button_sort:hover {
+						background-position: -19px -11px;
+						}
+
+
+
+			.tndr_form .form_section .form_section_buttons IMG {
+				margin-left: 2px;
+				}
+
+		.tndr_form .form_section .form_section_content {	
+			/* Only use when placing non form data inside section content area */
+			padding: 3px 0 5px 0;
+			}
+		
+		/*
+		.form_section_closed {
+			border-left: 0 !important;			
+			border-right: 0 !important;			
+			border-bottom: 0 !important;			
+			border-top: 0 !important;			
+			margin-top: 0 !important;			
+			}
+			.form_section_closed .form_section_content {
+				display: none;
+				}
+			.form_section_closed .form_section_header {
+				background: transparent !important;	
+				margin-bottom: 0 !important;			
+				padding-bottom: 0 !important;			
+				}
+			.form_section_header A.arrow,
+			.form_section_closed .form_section_header A {
+				padding-right: 13px;
+				background: transparent url('../img/arrow-small.gif') no-repeat right -14px;
+				}
+			.form_section_closed .section_content {
+				display: none;
+				}
+		*/
+		
+		.form_section_toggle {
+			margin-top: 3px !important;
+			position: relative;
+			top: 7px;
+			}
+			.form_section_toggle .form_section_header {
+				margin-bottom: 0 !important;			
+				padding-bottom: 0 !important;			
+				float: left;
+				background-color: #FBFBFB !important;
+				position: relative;
+				top: -12px !important;
+				}
+			.form_section_toggle .form_section_header A {
+				padding-right: 13px;
+				background: transparent url('../img/arrow-small.gif') no-repeat right 4px;
+				}
+			.form_section_toggle .section_content {
+				padding-top: 18px !important;
+				padding-bottom: 4px !important;
+				}				
+		.form_section_closed {
+			border-left-color: #FBFBFB !important;
+			border-top-color: #FBFBFB !important;
+			border-right: 0 !important;
+			border-bottom: 0 !important;
+			}
+			.form_section_closed .section_content {
+				display: none;
+				}
+			.form_section_closed .form_section_header A {
+				background-position: right -14px;
+				}
+	
+		
+
+/* FIELDSET
+ ---------------------------------------------------------------- */
+
+	.tndr_form FIELDSET {
+		border: 1px solid #ccc;
+		padding: 10px;
+		padding-bottom: 8px;
+		margin-bottom: 10px;
+		margin-top: 15px;
+		-moz-border-radius: 3px;
+		-webkit-border-radius: 3px;
+		}
+		.tndr_form FIELDSET .fs_content {
+			*padding-top: 10px; /* IE Only */
+			}
+
+		.tndr_form FIELDSET.closed {
+			border: 0;
+			border-top: 1px solid #999;
+			border-left: 1px solid #f6f6f6;
+			padding: 0 10px;
+			}
+			.tndr_form FIELDSET.closed DIV,
+			.tndr_form FIELDSET.closed DIV * {
+				display: none !important;
+				}
+		.tndr_form FIELDSET.closed LEGEND, 
+		.tndr_form FIELDSET LEGEND {
+			font-weight: bold;
+			padding: 0 5px;	
+			}
+			.tndr_form FIELDSET LEGEND A {
+				padding-right: 13px;
+				background: transparent url('../img/arrow-small.gif') no-repeat right 4px;
+				overflow: hidden;
+				text-decoration: none;
+				cursor: pointer;
+				}
+			.tndr_form FIELDSET.closed LEGEND A {
+				background-position: right -14px;
+				}
+
+
+
+
+
+/* FORM ELEMENTS : RADIO & CHECKBOX
+ ---------------------------------------------------------------- */
+
+	.tndr_form .form_input_radio,
+	.tndr_form .form_input_checkbox {
+		height: 16px;
+		width: 15px;				
+		float: left;
+		cursor: pointer;
+		background: url('../img/form_sprite_fields.gif') no-repeat 0 0;
+		}
+		.tndr_form .form_input_radio {
+			background-position: -16px 0;
+			}
+			.tndr_form .form_input_radio:hover {
+				background-position: -80px 0;
+				}
+		.tndr_form .form_input_checkbox {
+			background-position: -139px 0;
+			}
+			.tndr_form .form_input_checkbox:hover {
+				background-position: -203px 0;
+				}
+			.tndr_form .radio_checked {
+				background-position: 0 0;
+				}
+				.tndr_form .radio_checked:hover {
+					background-position: -64px 0;
+					}
+			.tndr_form .checkbox_checked {
+				background-position: -123px 0;
+				}
+				.tndr_form .checkbox_checked:hover {
+					background-position: -187px 0;
+					}
+		.tndr_form .form_input_radio.disabled {
+			background-position: -48px 0;
+			cursor: default;
+			}
+		.tndr_form .form_input_checkbox.disabled {
+			background-position: -155px 0;
+			cursor: default;
+			}
+
+		.tndr_form .form_input_radio INPUT,
+		.tndr_form .form_input_checkbox INPUT {
+			display: none;
+			}
+	
+
+/* FORM ELEMENTS : TEXT FIELD
+ ---------------------------------------------------------------- */
+
+	.tndr_form .form_input_text {
+		float: left;
+		background: url('../img/form_sprite_fields.gif') no-repeat left -25px;
+		height: 23px;
+		padding-left: 5px;
+		}
+		.tndr_form .form_input_text .display_field {
+			padding: 5px 4px 0 0;
+			height: 20px;
+			background: url('../img/form_sprite_fields.gif') no-repeat right -25px;
+			_float: left; /* IE6 */
+			}
+
+		.tndr_form .form_input_text.focus,
+		.tndr_form .form_input_text.hover {
+			background-position: 0 -85px;
+			}
+			.tndr_form .form_input_text.focus .display_field,
+			.tndr_form .form_input_text.hover .display_field {
+				background-position: right -85px;
+				}
+
+		.tndr_form .form_input_text INPUT {
+			border: 0;
+			padding: 0;
+			margin: 0;
+			background-color: transparent;
+			color: #ff00ff;
+			width: 240px;
+			_float: left; /* IE6 */
+			}
+			.tndr_form .form_input_text INPUT.size_small {
+				width: 50px;
+				}
+
+
+/* FORM ELEMENTS : SELECT (DROPDOWN)
+ ---------------------------------------------------------------- */
+	
+	.tndr_form .form_select {
+		float: left;
+		background: url('../img/form_sprite_dropdown.gif') no-repeat 0 0;
+		height: 22px;
+		cursor: pointer;
+		position: relative;
+		max-width: 300px;
+		width: auto !important;
+		width: 300px;
+		}
+		.tndr_form .field .form_select {
+			width: 250px !important;
+			}
+		.tndr_form .field .form_select.short {
+			width: 60px !important;
+			}
+
+		.tndr_form .form_select .display {
+			margin-left: 7px;
+			padding: 6px 26px 0 0;
+			height: 15px;
+			display: block;
+			background: url('../img/form_sprite_dropdown.gif') no-repeat right 0;
+			-webkit-user-select:none;
+			-moz-user-select:none;
+			}
+			.tndr_form .form_select.hover {
+				background-position: 0 -28px;
+				cursor: pointer !important;
+				}
+				.tndr_form .form_select.hover .display {
+					background-position: right -28px;
+					}
+	
+			.tndr_form .form_select .display .display_field {
+				width: 235px;
+				}
+
+
+			.tndr_form .form_select.open {
+				background-position: 0 -56px;
+				cursor: pointer !important;
+				z-index: 100;
+				}
+				.tndr_form .form_select.open .display {
+					background-position: right -56px;
+					}
+
+			.tndr_form .form_select .display SPAN {
+				width: 130px;
+				height: 20px;
+				overflow: hidden;
+				display: block;
+				}
+				
+		.tndr_form .form_select .options {
+			position: absolute;
+			color: white;
+			top: 22px;
+			left: 0;
+			width: 100%;
+			background: url('../img/form_sprite_dropdown.gif') no-repeat left bottom;
+			z-index: 200;
+			}
+			.tndr_form .form_select .options .options_inner {
+				background: url('../img/form_sprite_dropdown.gif') no-repeat right bottom;
+				margin-left: 3px;
+				padding: 2px 5px 5px 1px;
+				}
+			.tndr_form .form_select .options UL {
+				max-height: 150px;
+				height: auto !important;
+				height: 150px;
+				overflow: auto;
+				}
+				.tndr_form .form_select .options LI {
+					color: #444;
+					padding: 6px 4px;
+					border-top: 1px solid #a0a0a0;
+					font-weight: bold;
+					cursor: pointer !important;
+					-webkit-user-select:none;
+					-moz-user-select:none;
+					}
+					.tndr_form .form_select .options LI:hover {
+						background-color: #f4f4f4;
+						color: #111;
+						cursor: pointer !important;
+						}
+					.tndr_form .form_select .options LI:first-child,
+					.tndr_form .form_select .options LI.first { 
+						border-top: none;
+						}
+			.tndr_form .form_select .options .new {
+                border-top: 1px solid #A0A0A0;
+                height: 26px;
+                left: -3px;
+                margin-top: 4px;
+                padding: 11px 3px 0 54px;
+                position: relative;
+                width: 191px;
+			    }
+    			.tndr_form .form_select .options .new LABEL {
+                    left: 7px;
+                    width: 50px;
+                    position: absolute;
+    			    }
+    			.tndr_form .form_select .options .new .form_attributeselect_newfield {
+    			    font-size: 9px;
+    			    width: 126px;    			    
+    			    }
+	
+
+/* FORM ELEMENTS : TEXTAREA
+ ---------------------------------------------------------------- */
+
+
+	.tndr_form .form_textarea {
+		background: url('../img/form_sprite_fields.gif') no-repeat right -284px;
+		float: left;
+		}
+
+		.tndr_form .form_textarea .textarea_top_right {
+			width: 2px;
+			height: 4px;
+			background: url('../img/form_sprite_fields.gif') no-repeat 0 -284px;
+			float: left;
+			}
+		.tndr_form .form_textarea .textarea_btm {
+			clear: both;
+			background: url('../img/form_sprite_fields.gif') no-repeat 0 bottom;
+			padding-left: 2px;
+			margin-top: 4px;
+			}
+			.tndr_form .form_textarea .textarea_btm .textarea_btm_right {
+				background: url('../img/form_sprite_fields.gif') no-repeat right bottom;
+				padding: 0 2px 1px 0;	
+				margin-left: 4px;
+				}
+				.tndr_form .form_textarea .textarea_btm .textarea_btm_right TEXTAREA {
+					background-color: transparent;
+					border: 0;
+					width: 241px;
+					height: 150px;
+					resize: vertical; 
+					max-height: 300px;
+					padding: 0px;
+					resize: none;
+					line-height: 15px;
+					font-weight: normal;
+					}
+
+				.tndr_form .form_textarea .textarea_btm .textarea_btm_right TEXTAREA.wide {
+					width: 470px;
+					}
+
+/* FORM ELEMENTS : FILE
+ ---------------------------------------------------------------- */
+
+	.tndr_form .form_file {
+		position: relative;
+		background: url('../img/form_sprite_fields.gif') no-repeat 0 -114px;
+		width: 300px;
+		height: 23px;
+		float: left;
+		}
+
+		.tndr_form .form_file .fake {
+			background: url('../img/form_sprite_fields.gif') no-repeat right -114px;
+			height: 23px;
+			margin-left: 5px;
+			width: 296px;
+			top: 0;
+			left: 0;
+			z-index: 1;
+			}
+			.tndr_form .form_file .fake .display {
+				float: left;	
+				width: 240px !important;
+				height: 14px;
+				border: 0;
+				padding-top: 6px;
+				overflow: hidden;
+				white-space: nowrap;
+				}
+
+			.tndr_form .form_file.hover {
+				background-position:  0 -144px;
+				}
+				.tndr_form .form_file.hover .fake {
+					background-position:  right -144px;
+					}
+
+			.tndr_form .form_file INPUT.hidden_field {
+				position: absolute;
+				-moz-opacity: 0;
+				filter:alpha(opacity: 0);
+				opacity: 0;
+				z-index: 2;
+				background-color: transparent;
+				width: 198px;
+				height: 20px;
+				right: 0;
+				}
+
+
+
+/* FORM ELEMENTS : BUTTON (Not tied to tndr_form)
+ ---------------------------------------------------------------- */
+
+	BUTTON.button {
+		position: relative;
+		border: 0; 
+		padding: 0;
+		cursor: pointer;
+		overflow: visible; /* removes extra side padding in IE */
+		padding: 0 0 0 5px; 
+		margin-right: 5px; 
+		text-align: center; 
+		background: url('../img/form_sprite_button.gif') no-repeat left -81px;
+		}
+		BUTTON.button::-moz-focus-inner {
+			border: none;  /* overrides extra padding in Firefox */
+			}
+	
+		BUTTON.button_last {
+			margin-right: 0;
+			}
+			
+		BUTTON.button SPAN { 
+			position: relative;
+			display: block; 
+			white-space: nowrap;	
+			padding: 5px 25px 0 15px; 
+			height: 19px; 
+			background: url('../img/form_sprite_button.gif') no-repeat right 0;
+			font-size: 10px;
+			*font-size: 11px; /* IE */
+			*padding-top: 6px; /* IE */			
+			*padding-bottom: 2px; /* IE */			
+			*height: 16px; /* IE */			
+			color: #fff;
+			text-transform: uppercase;
+			font-weight: bold;
+			}
+		
+		@media screen and (-webkit-min-device-pixel-ratio:0) {
+			/* Safari and Google Chrome only - fix margins */
+			.tndr_form  BUTTON SPAN {
+				margin-top: -1px;
+				}
+			}
+		
+		BUTTON.button:hover { background-position: -15px -81px; }
+			BUTTON.button:hover SPAN { background-position: right -27px; color: #222; }
+
+		BUTTON.button:active { background-position: -33px -81px; }
+			BUTTON.button:active SPAN { background-position: right -53px; color: #222; }
+
+
+	/* Outline Button */
+
+	BUTTON.button_outline {
+		background-position: left -197px;
+		}
+		BUTTON.button_outline SPAN { 
+			background-position: right -116px;
+			color: #444;
+			}
+		BUTTON.button_outline:hover { background-position: -18px -197px; }
+			BUTTON.button_outline:hover SPAN { background-position: right -144px; color: #222; }
+
+		BUTTON.button_outline:active { background-position: -33px -197px; }
+			BUTTON.button_outline:active SPAN { background-position: right -170px; color: #666; }
+
+
+	/* Small Button */
+
+	BUTTON.button_small {
+		background-position: left -291px;
+		}
+		BUTTON.button_small SPAN { 
+			background-position: right -231px;
+			padding: 4px 15px 0 5px; 
+			font-size: 9px;
+			height: 15px; 
+			}
+		BUTTON.button_small:hover { background-position: -18px -291px; }
+			BUTTON.button_small:hover SPAN { background-position: right -251px; color: #222; }
+
+		BUTTON.button_small:active { background-position: -33px -291px; }
+			BUTTON.button_small:active SPAN { background-position: right -271px; color: #666; }
+
+	/* Small Outline Button */
+
+	BUTTON.button_outline_small {
+		background-position: left -382px;
+		}
+		BUTTON.button_outline_small SPAN { 
+			background-position: right -322px;
+			padding: 4px 15px 0 5px; 
+			font-size: 9px;
+			height: 15px; 
+			color: #999;
+			}
+		BUTTON.button_outline_small:hover { background-position: -18px -382px; }
+			BUTTON.button_outline_small:hover SPAN { background-position: right -342px; color: #222; }
+
+		BUTTON.button_outline_small:active { background-position: -33px -382px; }
+			BUTTON.button_outline_small:active SPAN { background-position: right -362px; color: #666; }
+
+
+
+
+/* FORM ELEMENTS : DROPDOWN BUTTON (Not tied to tndr_form)
+ ---------------------------------------------------------------- */
+
+	.dropdown_button {
+		margin-right: 6px;
+		padding-bottom: 6px;
+		position: relative;
+		}
+	.dropdown_button A.button {
+		background: transparent url('../img/form_sprite_dropdown_button.gif') no-repeat scroll top right;
+		color: #444;
+		font-weight: bold;
+		display: block;
+		float: left;
+		height: 24px;
+		padding-right: 35px;
+		text-decoration: none;
+		cursor: pointer;
+		font-size: 11px;
+		text-transform: uppercase;
+		width: 110px;
+		*width: 140px;
+		}
+		.dropdown_button A.button SPAN {
+			background: transparent url('../img/form_sprite_dropdown_button.gif') no-repeat;
+			display: block;
+			line-height: 20px;
+			padding: 1px 0 4px 17px;
+			-moz-user-select: none;
+			}
+
+		.dropdown_button A.button:hover{ background-position: 100% -28px; }
+		.dropdown_button A.button:hover SPAN {background-position: 0 -28px; }
+
+		.dropdown_button A.button.open{ background-position: 100% -28px; }
+		.dropdown_button A.button.open SPAN {background-position: 0 -28px; }
+
+		.dropdown_button A.button:active { background-position: 100% -56px; }
+		.dropdown_button A.button:active SPAN { background-position: 0 -56px; }
+
+		.dropdown_button UL {
+			position: absolute;
+			width: 141px;
+			*width: 171px; 
+			background-color: #a0a0a0;
+			border-right: 2px solid #c2c2c2;
+			padding: 1px;
+			margin-top: 21px;
+			margin-left: 0;
+			top: 0;
+			left: 0;
+			z-index: 100;
+			}
+			.dropdown_button UL LI {
+				background-color: #dfdfdf;
+				font-weight: bold;
+				}
+				.dropdown_button UL LI A {
+					padding: 5px 7px 5px 15px;
+					display: block;
+					text-decoration: none;
+					cursor: pointer !important;
+					color: #444;
+					}
+					.dropdown_button UL LI A:hover {
+						background-color: #c6c6c6;
+						cursor: pointer !important;
+						color: #222;
+						}
+
+
+
+/* SPECIAL STYLES WHEN INSIDE MODAL DIALOG
+ ---------------------------------------------------------------- */
+
+	.popup .tndr_form { 
+		}
+	
+	.popup .form_row { 
+		}
+	
+		.popup .form_row .title, 
+		.popup .form_row LABEL {
+			width: 100px;
+			}
+
+		.popup .form_row .field {
+			width: 190px;
+			}
+			.popup .form_row .field_text {
+				}
+
+		.popup .form_row .note {	
+			padding-left: 132px;
+			}
+		
+		.popup .form_row INPUT[type=text], 
+		.popup .form_row INPUT[type=password] {
+			width: 200px;
+			}
+
+		.popup .form_row TEXTAREA,
+		.popup .form_row SELECT {
+			width: 200px;
+			}
+
+	.popup .tndr_form .form_file {
+		width: 206px;
+		}
+
+		.popup .tndr_form .form_file .fake {
+			width: 202px;
+			}
+			.popup .tndr_form .form_file .fake .display {
+				width: 146px !important;
+				}
+
+			.popup .tndr_form .form_file INPUT.hidden_field {
+				width: 104px;
+				}
+
+				

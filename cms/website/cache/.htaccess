@@ -1,0 +1,17 @@
+# --------------------------------------------------------------------------------
+#
+# CMS Cache Configuration File
+# Author: VSA Partners
+#
+# --------------------------------------------------------------------------------
+
+
+
+# --------------------------------------------------------------------------------
+# SET EXPIRE HEADERS FOR CMS CACHE FILES
+
+<FilesMatch "\.(js|css)(\.gz)?$">
+Header set Expires "Tue, 01 Jan 2030 20:00:00 GMT"
+Header unset ETag
+FileETag None
+</FilesMatch>

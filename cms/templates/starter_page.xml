@@ -1,0 +1,75 @@
+
+<xsl:stylesheet version="1.0" 
+	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+	xmlns:exslt="http://exslt.org/common"
+	xmlns:php="http://php.net/xsl"
+	exclude-result-prefixes="xsl php exslt">
+
+	<xsl:output method="html" media-type="text/html"
+		indent="yes"
+		omit-xml-declaration="yes"
+		encoding="UTF-8" />
+
+
+	<!-- -->
+	<xsl:variable name="PAGE" select="/data"/>
+	<xsl:variable name="PAGE_ID" select="/data/page_id"/>
+	<xsl:variable name="CONTENT" select="/data/content/data"/>
+	<xsl:include href="../website/application/xsl/includes.xsl"/>
+	<xsl:include href="_includes.xsl"/>
+
+
+
+	<xsl:template match="/">
+	
+	<style>
+asdf
+	</style>
+
+		<div id="page">
+			<div id="content">
+
+					<div id="logo"><img src="/cms/manage/assets/img/vsa_logo.png"/></div>
+					<h1>
+                   		<xsl:value-of select="$CONTENT//header_copy"/> 
+                   	</h1>
+
+					<div id="intro">
+						<xsl:call-template name="nl2br">
+						<!-- the includes.xsl has several functions like converting nl to br -->
+                    		<xsl:with-param name="contents"  select="$CONTENT//body_copy"/> 
+                    	</xsl:call-template>
+                   	</div>
+
+
+					<!-- xsl allows you to do if statements and for-each loops -->
+					<xsl:if test="$CONTENT/download/button_text != ''">
+						<a href="{$CONTENT/download/download_file/@file_path}" class="button"><xsl:value-of select="$CONTENT/download/button_text"/></a>
+					</xsl:if>
+
+
+                   	<hr/>
+					<xsl:for-each select="$CONTENT//section">
+						<div>
+							<strong><xsl:value-of select="title"/></strong>
+							<div class="item_copy">
+								<xsl:value-of select="text"/>
+							</div>
+							<xsl:if test="button/@link_title != ''">
+								<a href="{button}" target="{button/@target}" class="button"><xsl:value-of select="button/@link_title"/></a>
+							</xsl:if>
+						</div>
+
+                   		<hr/>
+					</xsl:for-each>
+                
+
+
+			</div>
+		</div>
+
+	</xsl:template>
+
+
+
+</xsl:stylesheet>

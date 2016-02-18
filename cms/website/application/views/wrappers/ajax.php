@@ -1,0 +1,1 @@
+<?=$this->layout->getRegionData('content');?>
