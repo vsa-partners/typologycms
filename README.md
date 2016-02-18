@@ -50,4 +50,6 @@ The **Typology CMS** is ideal for marketing and advertising agencies looking to 
 
 ##Installation
 
-Install and configuration information is available in /docs
+- Copy deploy directory to document root folder	- If this is a view-only production site, delete the cms/manage folder	- Don't forget the htaccess! (normally it is hidden. The hidden files can be shown by using this command in the mac terminal window `defaults write com.apple.finder AppleShowAllFiles YES`)- `chmod -R 777` the following directories:	- cms/local/files	- cms/system/logs	- cms/website/cache	- cms/manage/cache- Update cms/local/database.php with db credentials
+- Visit www.domain.com/install/index.php to set all initial configuration and create a default page.
+- Please do remember to remove the install folder after installation.
